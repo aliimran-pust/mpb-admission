@@ -54,7 +54,7 @@
                     </a>
                 </li>
 
-                <!-- new -->
+                <!-- new 15.01.2026 -->
                 <li class="nav-item {{ request()->routeIs('semesters.*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->routeIs('semesters.*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-calendar-alt"></i>
