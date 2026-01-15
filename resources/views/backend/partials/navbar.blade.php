@@ -54,6 +54,85 @@
                     </a>
                 </li>
 
+                <!-- new -->
+                <li class="nav-item {{ request()->routeIs('semesters.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('semesters.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p>
+                            Semester
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('semesters.index') }}"
+                               class="nav-link {{ request()->routeIs('semesters.index') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Semester List</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('semesters.create') }}"
+                               class="nav-link {{ request()->routeIs('semesters.create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Semester</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item {{ request()->routeIs('courses.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('courses.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Courses
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('courses.index') }}" class="nav-link {{ request()->routeIs('courses.index') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Course List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('courses.create') }}" class="nav-link {{ request()->routeIs('courses.create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Course</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item {{ request()->routeIs('teachers.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('teachers.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Teachers
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('teachers.index') }}" class="nav-link {{ request()->routeIs('teachers.index') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Teacher List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('teachers.create') }}" class="nav-link {{ request()->routeIs('teachers.create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Teacher</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- new -->
+
                 @can('applicant-manage')
 
                     <li class="nav-item">

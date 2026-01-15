@@ -5,6 +5,10 @@ use App\Http\Controllers\Transcript\TranscriptController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\CandidateController;
 
+use App\Http\Controllers\Backend\SemesterController;
+use App\Http\Controllers\Backend\CourseController;
+use App\Http\Controllers\Backend\TeacherController;
+
 
 //Route::get('/', [HomeController::class, 'index']);
 
@@ -54,3 +58,21 @@ Route::get('/test-email', function() {
         return "Error: " . $e->getMessage();
     }
 });
+
+
+// new
+Route::prefix('backend')->middleware(['auth'])->group(function () {
+    Route::resource('semesters', SemesterController::class)
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+});
+
+Route::prefix('backend')->middleware(['auth'])->group(function () {
+    Route::resource('courses', CourseController::class)
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+});
+
+Route::prefix('backend')->middleware(['auth'])->group(function () {
+    Route::resource('teachers', TeacherController::class)
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+});
+// new
