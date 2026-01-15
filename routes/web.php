@@ -60,7 +60,7 @@ Route::get('/test-email', function() {
 });
 
 
-// new
+// new 15.01.2026
 Route::prefix('backend')->middleware(['auth'])->group(function () {
     Route::resource('semesters', SemesterController::class)
         ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
