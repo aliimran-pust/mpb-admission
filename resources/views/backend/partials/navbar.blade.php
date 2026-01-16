@@ -151,7 +151,7 @@
                         <li class="nav-item">
                             <a href="{{ route('batches.create') }}" class="nav-link {{ request()->routeIs('batches.create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add New Batch</p>
+                                <p>Add Batch</p>
                             </a>
                         </li>
                     </ul>
