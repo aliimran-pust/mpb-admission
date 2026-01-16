@@ -130,8 +130,81 @@
                         </li>
                     </ul>
                 </li>
+                <!-- new 15.01.2026 -->
+                <!-- new 16.01.2026 -->
+                <li class="nav-item {{ request()->routeIs('batches.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('batches.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Batches
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
 
-                <!-- new -->
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('batches.index') }}" class="nav-link {{ request()->routeIs('batches.index') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Batch List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('batches.create') }}" class="nav-link {{ request()->routeIs('batches.create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add New Batch</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item {{ request()->routeIs('fee-categories.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('fee-categories.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Fee Categories
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('fee-categories.index') }}" class="nav-link {{ request()->routeIs('fee-categories.index') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Fee Category List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('fee-categories.create') }}" class="nav-link {{ request()->routeIs('fee-categories.create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Fee Category</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item {{ request()->routeIs('fee-structures.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('fee-structures.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Fee Structures
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('fee-structures.index') }}" class="nav-link {{ request()->routeIs('fee-structures.index') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Fee Structure List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('fee-structures.create') }}" class="nav-link {{ request()->routeIs('fee-structures.create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Fee Structure</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- new 16.01.2026 -->
 
                 @can('applicant-manage')
 

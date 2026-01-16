@@ -8,6 +8,9 @@ use App\Http\Controllers\Admin\CandidateController;
 use App\Http\Controllers\Backend\SemesterController;
 use App\Http\Controllers\Backend\CourseController;
 use App\Http\Controllers\Backend\TeacherController;
+use App\Http\Controllers\Backend\BatchController;
+use App\Http\Controllers\Backend\FeeCategoryController;
+use App\Http\Controllers\Backend\FeeStructureController;
 
 
 //Route::get('/', [HomeController::class, 'index']);
@@ -73,6 +76,21 @@ Route::prefix('backend')->middleware(['auth'])->group(function () {
 
 Route::prefix('backend')->middleware(['auth'])->group(function () {
     Route::resource('teachers', TeacherController::class)
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+});
+
+Route::prefix('backend')->middleware(['auth'])->group(function () {
+    Route::resource('batches', BatchController::class)
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+});
+
+Route::prefix('backend')->middleware(['auth'])->group(function () {
+    Route::resource('fee-categories', FeeCategoryController::class)
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+});
+
+Route::prefix('backend')->middleware(['auth'])->group(function () {
+    Route::resource('fee-structures', FeeStructureController::class)
         ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 });
 // new
