@@ -12,7 +12,6 @@ use App\Http\Controllers\Backend\BatchController;
 use App\Http\Controllers\Backend\FeeCategoryController;
 use App\Http\Controllers\Backend\FeeStructureController;
 
-
 //Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/clear', function () {
