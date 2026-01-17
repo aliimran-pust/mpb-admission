@@ -45,15 +45,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('candidate_list') }}" class="nav-link {{ request()->routeIs('candidate_list') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Pending Member List
-                        </p>
-                    </a>
-                </li>
-
                 <!-- new 15.01.2026 -->
                 <li class="nav-item {{ request()->routeIs('semesters.*') ? 'menu-open' : '' }}">
                     <a href="#" class="nav-link {{ request()->routeIs('semesters.*') ? 'active' : '' }}">
