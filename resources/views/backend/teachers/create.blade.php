@@ -1,13 +1,20 @@
 @extends('backend.layout')
 
 @section('content')
+
 <div class="content-header">
     <div class="container-fluid">
-        <ol class="breadcrumb float-sm-left">
-            <li class="breadcrumb-item">Teacher List</li>
-            <li class="breadcrumb-item active">Add Teacher</li>
-        </ol>
-        <a class="btn btn-info btn-xs float-right" href="{{ route('teachers.index') }}"><< Go Back</a>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item">Teacher List</li>
+                    <li class="breadcrumb-item active">Add Teacher</li>
+                </ol>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-info btn-xs float-right" href="{{ route('teachers.index') }}"><< Go Back</a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -105,8 +112,8 @@
                     <div class="form-group">
                         <label for="status" class="col-form-label">Status</label>
                         <select name="status" class="form-control">
-                            <option value="1" {{ old('status',1)==1?'selected':'' }}>Active</option>
-                            <option value="0" {{ old('status')==0?'selected':'' }}>Inactive</option>
+                            <option value="1" {{ old('status',1) == 1 ? 'selected':'' }}>Active</option>
+                            <option value="0" {{ old('status') == 0 ? 'selected':'' }}>Inactive</option>
                         </select>
                     </div>
 

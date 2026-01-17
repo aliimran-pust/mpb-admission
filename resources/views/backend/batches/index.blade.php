@@ -1,17 +1,25 @@
 @extends('backend.layout')
 
 @section('content')
+
+<!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
-        <ol class="breadcrumb float-sm-left">
-            <li class="breadcrumb-item">Batch</li>
-            <li class="breadcrumb-item active">Batch List</li>
-        </ol>
-        <a href="{{ route('batches.create') }}" class="btn btn-success btn-xs float-right">
-            <i class="fa fa-plus"></i> Add Batch
-        </a>
-    </div>
-</div>
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <a href="{{route('batches.create')}}" class="btn btn-primary"> <i class="fas fa-plus"></i> Add Batch</a>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item">Batch</li>
+                    <li class="breadcrumb-item active">List</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div><!-- /.content-header -->
+
 
 <section class="content">
 <div class="container-fluid">

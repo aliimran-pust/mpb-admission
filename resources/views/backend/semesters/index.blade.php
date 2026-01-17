@@ -1,17 +1,25 @@
 @extends('backend.layout')
 
 @section('content')
-<div class="content-header">
-    <div class="container-fluid">
-        <ol class="breadcrumb float-sm-left">
-            <li class="breadcrumb-item">Semester</li>
-            <li class="breadcrumb-item active">List</li>
-        </ol>
-        <a href="{{ route('semesters.create') }}" class="btn btn-info btn-xs float-right">
-            + Add Semester
-        </a>
-    </div>
-</div>
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <a href="{{route('semesters.create')}}" class="btn btn-primary"> <i class="fas fa-plus"></i> Add Semester</a>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item">Semester</li>
+                        <li class="breadcrumb-item active">List</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div><!-- /.content-header -->
+
 
 <section class="content">
     <div class="container-fluid">
@@ -22,7 +30,7 @@
 
             <div class="card-body">
                 @if(session('message'))
-                    <div class="alert alert-info">{{ session('message') }}</div>
+                    <div class="alert alert-primary">{{ session('message') }}</div>
                 @endif
 
                 <table class="table table-bordered table-striped">
@@ -50,7 +58,7 @@
                                 </a>
 
                                 <!-- Delete Button -->
-                                <button type="button" class="btn btn-xs btn-danger" 
+                                <button type="button" class="btn btn-xs btn-danger"
                                         data-toggle="modal" data-target="#deleteModal{{ $semester->id }}">
                                     Delete
                                 </button>
@@ -72,7 +80,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Are you sure you want to delete semester 
+                                                    Are you sure you want to delete semester
                                                     <strong>{{ $semester->semesterName }} {{ $semester->semesterYear }}</strong>?
                                                 </div>
                                                 <div class="modal-footer">

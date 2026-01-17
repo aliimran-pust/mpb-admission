@@ -1,13 +1,20 @@
 @extends('backend.layout')
 
 @section('content')
+
 <div class="content-header">
     <div class="container-fluid">
-        <ol class="breadcrumb float-sm-left">
-            <li class="breadcrumb-item">Batch</li>
-            <li class="breadcrumb-item active">Add Batch</li>
-        </ol>
-        <a class="btn btn-info btn-xs float-right" href="{{ route('batches.index') }}"><< Go Back</a>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item">Batch List</li>
+                    <li class="breadcrumb-item active">Add Batch</li>
+                </ol>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-info btn-xs float-right" href="{{ route('batches.index') }}"><< Go Back</a>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -25,7 +25,7 @@
     <a href="#" class="brand-link">
         <img src="{{ asset('assets/backend/img/logo.png') }}" alt="Logo"
             class="brand-image elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light"> <b>M</b>PB</span>
+        <span class="brand-text font-weight-light"> <b>M</b>PB <b>A</b>dmin</span>
     </a>
 
     <!-- Sidebar -->

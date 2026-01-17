@@ -5,13 +5,17 @@
 @endpush
 
 @section('content')
+
 <div class="content-header">
     <div class="container-fluid">
-        <ol class="breadcrumb float-sm-left">
-            <li class="breadcrumb-item">Courses</li>
-            <li class="breadcrumb-item active">Edit Course</li>
-        </ol>
-        <a href="{{ route('courses.index') }}" class="btn btn-info btn-xs float-right"><< Go Back</a>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <h1>Edit Courses</h1>
+            </div>
+            <div class="col-md-6">
+                <a href="{{ route('courses.index') }}" class="btn btn-primary btn-xs float-right"><< Go Back</a>
+            </div>
+        </div>
     </div>
 </div>
 

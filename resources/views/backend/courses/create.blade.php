@@ -5,15 +5,24 @@
 @endpush
 
 @section('content')
-<div class="content-header">
-    <div class="container-fluid">
-        <ol class="breadcrumb float-sm-left">
-            <li class="breadcrumb-item">Courses</li>
-            <li class="breadcrumb-item active">Add Course</li>
-        </ol>
-        <a href="{{ route('courses.index') }}" class="btn btn-info btn-xs float-right"><< Go Back</a>
+
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item">Course List</li>
+                        <li class="breadcrumb-item active">Add Course</li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-info btn-xs float-right" href="{{ route('courses.index') }}"><< Go Back</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+
 
 <section class="content">
     <div class="container-fluid">
@@ -25,6 +34,17 @@
             <form method="POST" action="{{ route('courses.store') }}">
                 @csrf
                 <div class="card-body">
+                    @if(Session::has('message'))
+                        <div class="alert alert-success" role="alert">
+                            {{ request()->session()->pull('message') }}
+                        </div>
+                    @endif
+
+                    @if(Session::has('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ request()->session()->pull('error') }}
+                        </div>
+                    @endif
 
                     {{-- Department --}}
                     <div class="form-group">

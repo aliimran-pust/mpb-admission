@@ -1,17 +1,18 @@
 @extends('backend.layout')
 
 @section('content')
-<div class="content-header">
-    <div class="container-fluid">
-        <ol class="breadcrumb float-sm-left">
-            <li class="breadcrumb-item">Semester</li>
-            <li class="breadcrumb-item active">Edit</li>
-        </ol>
-        <a href="{{ route('semesters.index') }}" class="btn btn-info btn-xs float-right">
-            << Go Back
-        </a>
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <h1>Edit Semester</h1>
+                </div>
+                <div class="col-md-6">
+                    <a href="{{ route('semesters.index') }}" class="btn btn-primary btn-xs float-right"><< Go Back</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
 <section class="content">
     <div class="container-fluid">
