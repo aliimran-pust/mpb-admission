@@ -195,6 +195,30 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item {{ request()->routeIs('course-offers.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('course-offers.*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Course Offers
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('course-offers.index') }}" class="nav-link {{ request()->routeIs('course-offers.index') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Course Offer List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('course-offers.create') }}" class="nav-link {{ request()->routeIs('course-offers.create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Course Offer</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <!-- new 16.01.2026 -->
 
                 @can('applicant-manage')
