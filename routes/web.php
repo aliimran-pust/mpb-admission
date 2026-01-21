@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\TeacherController;
 use App\Http\Controllers\Backend\BatchController;
 use App\Http\Controllers\Backend\FeeCategoryController;
 use App\Http\Controllers\Backend\FeeStructureController;
+use App\Http\Controllers\Backend\CourseOfferController;
 
 
 //Route::get('/', [HomeController::class, 'index']);
@@ -68,6 +69,11 @@ Route::prefix('backend')->middleware(['auth'])->group(function () {
 
 Route::prefix('backend')->middleware(['auth'])->group(function () {
     Route::resource('fee-structures', FeeStructureController::class)
+        ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+});
+
+Route::prefix('backend')->middleware(['auth'])->group(function () {
+    Route::resource('course-offers', CourseOfferController::class)
         ->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 });
 // new
