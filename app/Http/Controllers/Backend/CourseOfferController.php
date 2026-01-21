@@ -53,7 +53,7 @@ class CourseOfferController extends Controller
             ->route('course-offers.index')
             ->with('message', 'Course Offer Created Successfully');
     }
-
+    
     public function edit($id)
     {
         $courseOffer = CourseOffer::findOrFail($id);
